@@ -5,6 +5,7 @@
 			"source_path": "output/win2012r2/virtualbox/base/packer-virtualbox-win2012r2.ovf",
 			"headless": "false",
 			"checksum_type": "none",
+			"boot_wait": "1m",
 			"communicator": "ssh",
 			"ssh_username": "vagrant",
 			"ssh_password": "vagrant",
