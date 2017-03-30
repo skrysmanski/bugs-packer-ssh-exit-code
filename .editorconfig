@@ -1,0 +1,17 @@
+# http://editorconfig.org/#example-file
+# top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = tab
+tab_width = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[{*.ps1,*.cmd}]
+end_of_line = crlf
+
+[*{U,u}nattend.xml]
+end_of_line = crlf
