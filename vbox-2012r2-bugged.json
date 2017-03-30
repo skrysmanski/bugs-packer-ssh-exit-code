@@ -1,0 +1,26 @@
+{
+	"builders": [
+		{
+			"type": "virtualbox-ovf",
+			"source_path": "output/win2012r2/virtualbox/base/packer-virtualbox-win2012r2.ovf",
+			"headless": "false",
+			"checksum_type": "none",
+			"communicator": "ssh",
+			"ssh_username": "vagrant",
+			"ssh_password": "vagrant",
+			"ssh_timeout": "10m",
+			"shutdown_command": "C:/windows/system32/sysprep/sysprep.exe /generalize /oobe /unattend:C:/postunattend.xml /quiet /shutdown",
+			"shutdown_timeout": "15m",
+			"guest_additions_mode": "disable",
+			"output_directory": "output/win2012r2/virtualbox/bugged",
+			"vm_name": "packer-virtualbox-win2012r2-bugged"
+		}
+	],
+
+	"provisioners": [
+		{
+			"type": "windows-shell",
+			"inline": "exit 1"
+		}
+	]
+}
